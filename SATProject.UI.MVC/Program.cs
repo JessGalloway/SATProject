@@ -7,17 +7,24 @@ using SATProject.DATA.EF.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<SATContext>(options =>
+
+// Add services to the container. informs us if a db object is invalid 
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string not found");
+
+
+//UI layber 
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
+
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 
 
 //Database 
-
+builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<SATContext>(options =>
+    options.UseSqlServer(connectionString));
 
 
 //Added identity
