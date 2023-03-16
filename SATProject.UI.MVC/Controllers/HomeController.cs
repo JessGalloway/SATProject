@@ -23,6 +23,36 @@ namespace SATProject.UI.MVC.Controllers
             return View();
         }
 
+        public IActionResult Blog()
+        {
+            return View();
+        }
+
+        public IActionResult Class()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public IActionResult Gallery()
+        {
+            return View();
+        }
+
+        public IActionResult Single()
+        {
+            return View();
+        }
+
+        public IActionResult Team()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
