@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using SATProject.DATA.EF.Models;
 
 namespace SATProject.UI.MVC.Controllers
 {
+    [Authorize(Roles = "Admin, Scheduling")]
     public class ScheduledClassesController : Controller
     {
         private readonly SATContext _context;
@@ -126,6 +128,7 @@ namespace SATProject.UI.MVC.Controllers
             return View(scheduledClass);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: ScheduledClasses/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
