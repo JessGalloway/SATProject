@@ -57,44 +57,44 @@
                     <a asp-action="Team" asp-controller="Home" class="nav-item nav-link"></a>
 
 
-                     
+
                     @if (User.IsInRole("Admin"))
                     {
 
-                                          <div class="nav-item dropdown">
-                                <a href="#"
-                                class="nav-link dropdown-toggle"
-                                data-toggle="dropdown">Admin</a>
-                                <div class="dropdown-menu rounded-0 m-0">    
-                               
-                                    <a asp-action="ListRoles" asp-controller="Administration" class="nav-item nav-link">Roles</a>
-                                    <a asp-action="Index" asp-controller="Courses" class="nav-item nav-link">Courses</a>
-                                    <a asp-action="Index" asp-controller="StudentStatus" class="nav-item nav-link">Student Status</a>
-                                    <a asp-action="ListUsers" asp-controller="Administration" class="nav-item nav-link">Users</a>
-                                               <a asp-action="Index" asp-controller="Students" class="nav-item nav-link">Students</a>
-                                                         <a asp-action="Index" asp-controller="Enrollments" class="nav-item nav-link">Enrollments</a>
-                                    </div>
+                        <div class="nav-item dropdown">
+                            <a href="#"
+                           class="nav-link dropdown-toggle"
+                           data-toggle="dropdown">Admin</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+
+                                <a asp-action="ListRoles" asp-controller="Administration" class="nav-item nav-link">Roles</a>
+                                <a asp-action="Index" asp-controller="Courses" class="nav-item nav-link">Courses</a>
+                                <a asp-action="Index" asp-controller="StudentStatus" class="nav-item nav-link">Student Status</a>
+                                <a asp-action="ListUsers" asp-controller="Administration" class="nav-item nav-link">Users</a>
+                                <a asp-action="Index" asp-controller="Students" class="nav-item nav-link">Students</a>
+                                <a asp-action="Index" asp-controller="Enrollments" class="nav-item nav-link">Enrollments</a>
                             </div>
-                              
+                        </div>
+
 
                     }
-                      @if (User.IsInRole("Admin") || User.IsInRole("Scheduling"))
+                    @if (User.IsInRole("Admin") || User.IsInRole("Scheduling"))
                     {
-                          <div class="nav-item dropdown">
-                                <a href="#"
-                                class="nav-link dropdown-toggle"
-                                data-toggle="dropdown">Admin</a>
-                                <div class="dropdown-menu rounded-0 m-0">
+                        <div class="nav-item dropdown">
+                            <a href="#"
+                           class="nav-link dropdown-toggle"
+                           data-toggle="dropdown">Admin</a>
+                            <div class="dropdown-menu rounded-0 m-0">
 
-                                        <a asp-action="Index" asp-controller="Enrollments" class="nav-item nav-link">Enrollments</a>
-                                        <a asp-action="Index" asp-controller="ScheduledClasses" class="nav-item nav-link">Courses</a>
-                                        <a asp-action="Index" asp-controller="Students" class="nav-item nav-link">Students</a>
-                                        </div>
+                                <a asp-action="Index" asp-controller="Enrollments" class="nav-item nav-link">Enrollments</a>
+                                <a asp-action="Index" asp-controller="ScheduledClasses" class="nav-item nav-link">Courses</a>
+                                <a asp-action="Index" asp-controller="Students" class="nav-item nav-link">Students</a>
                             </div>
+                        </div>
 
                     }
-                      
-                  
+
+
 
                     <partial name="_LoginPartial" />
 

@@ -9,7 +9,7 @@
 <p class="bg-primary text-center p-2">
     <a class="text-light btn btn-secondary" asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table bg-secondary text-light">
     <thead>
         <tr>
             <th>
@@ -35,7 +35,7 @@
     </thead>
     <tbody>
     @foreach (var item in Model) {
-        <tr>
+        <tr class="bg-primary text-dark">
             <td>
                 @Html.DisplayFor(modelItem => item.CourseName)
             </td>
@@ -55,9 +55,9 @@
                 @Html.DisplayFor(modelItem => item.IsActive)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.CourseId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CourseId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CourseId">Delete</a>
+                <a class="btn btn-secondary text-light" asp-action="Edit" asp-route-id="@item.CourseId">Edit</a>
+                <a class="btn btn-warning text-dark" asp-action="Details" asp-route-id="@item.CourseId">Details</a>
+                <a class="btn btn-danger text-light" asp-action="Delete" asp-route-id="@item.CourseId">Delete</a>
             </td>
         </tr>
     }
