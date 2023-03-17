@@ -53,8 +53,6 @@
                     <a asp-action="About" asp-controller="Home" class="nav-item nav-link">About</a>
                     <a asp-action="Class" asp-controller="Home" class="nav-item nav-link">Classes</a>
                     <a asp-action="Team" asp-controller="Home" class="nav-item nav-link">Teachers</a>
-                    <a asp-action="Index" asp-controller="Courses" class="nav-item nav-link">Courses</a>
-                    <a asp-action="Team" asp-controller="Home" class="nav-item nav-link"></a>
 
 
 
@@ -67,18 +65,19 @@
                            data-toggle="dropdown">Admin</a>
                             <div class="dropdown-menu rounded-0 m-0">
 
-                                <a asp-action="ListRoles" asp-controller="Administration" class="nav-item nav-link">Roles</a>
-                                <a asp-action="Index" asp-controller="Courses" class="nav-item nav-link">Courses</a>
-                                <a asp-action="Index" asp-controller="StudentStatus" class="nav-item nav-link">Student Status</a>
-                                <a asp-action="ListUsers" asp-controller="Administration" class="nav-item nav-link">Users</a>
-                                <a asp-action="Index" asp-controller="Students" class="nav-item nav-link">Students</a>
-                                <a asp-action="Index" asp-controller="Enrollments" class="nav-item nav-link">Enrollments</a>
+                                <a asp-action="ListRoles" asp-controller="Administration" class="nav-item nav-link px-3 py-2">Roles</a>
+                                <a asp-action="Index" asp-controller="Courses" class="nav-item nav-link px-3 py-2">Courses</a>
+                                <a asp-action="Index" asp-controller="StudentStatus" class="nav-item nav-link px-3 py-2">Student Status</a>
+                                <a asp-action="ListUsers" asp-controller="Administration" class="nav-item nav-link px-3 py-2">Users</a>
+                                <a asp-action="Index" asp-controller="Enrollments" class="nav-item nav-link px-3 py-2">Enrollments</a>
+                                <a asp-action="Index" asp-controller="ScheduledClasses" class="nav-item nav-link px-3 py-2">Scheduled Classes</a>
+                                <a asp-action="Index" asp-controller="Students" class="nav-item nav-link px-3 py-2">Students</a>
                             </div>
                         </div>
 
 
                     }
-                    @if (User.IsInRole("Admin") || User.IsInRole("Scheduling"))
+                    @if (User.IsInRole("Scheduling"))
                     {
                         <div class="nav-item dropdown">
                             <a href="#"
@@ -86,9 +85,9 @@
                            data-toggle="dropdown">Admin</a>
                             <div class="dropdown-menu rounded-0 m-0">
 
-                                <a asp-action="Index" asp-controller="Enrollments" class="nav-item nav-link">Enrollments</a>
-                                <a asp-action="Index" asp-controller="ScheduledClasses" class="nav-item nav-link">Courses</a>
-                                <a asp-action="Index" asp-controller="Students" class="nav-item nav-link">Students</a>
+                                <a asp-action="Index" asp-controller="Enrollments" class="nav-item nav-link px-3 py-2">Enrollments</a>
+                                <a asp-action="Index" asp-controller="ScheduledClasses" class="nav-item nav-link px-3 py-2">Scheduled Classes</a>
+                                <a asp-action="Index" asp-controller="Students" class="nav-item nav-link px-3 py-2">Students</a>
                             </div>
                         </div>
 
