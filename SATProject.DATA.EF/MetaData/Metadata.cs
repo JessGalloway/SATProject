@@ -12,11 +12,12 @@ namespace SATProject.DATA.EF.Models //MetaData
     public class CourseMetaData 
     {
         //PK
+        [Display(Name="Course")]
         public int CourseId { get; set; }
 
         [Required(ErrorMessage = "*Course Name is required")]
         [StringLength(50)]
-        [Display(Name = "Course Name")]
+        [Display(Name="Course Name")]
         public string CourseName { get; set; } = null!;
 
         [StringLength(1000)]
@@ -46,7 +47,7 @@ namespace SATProject.DATA.EF.Models //MetaData
         //pk
         public int EnrollmentId { get; set; }
 
-        
+        [Display(Name = "Student")]
         public int StudentId { get; set; }
 
         [Required(ErrorMessage ="* Enrollement date must be set")]
